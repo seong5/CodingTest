@@ -4,13 +4,13 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let input = [];
+let input = []; // string, 5 를 입력했을 때.
 
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
-    const str = input[0];
-    const n = Number(input[1]);
+     str = input[0]; 
+     n = Number(input[1]);
     
     let result = "";
     for (let i = 0; i < n; i++){
