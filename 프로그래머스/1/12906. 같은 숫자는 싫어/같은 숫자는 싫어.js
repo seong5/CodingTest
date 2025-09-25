@@ -1,8 +1,3 @@
 function solution(arr) {
-  return arr.reduce((acc, cur) => {
-    if (acc[acc.length - 1] !== cur) {
-      acc.push(cur);
-    }
-    return acc;
-  }, []);
+  return arr.filter((num, i) => num !== arr[i - 1]);
 }
