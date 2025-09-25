@@ -1,12 +1,7 @@
 function solution(phone_book) {
-  const set = new Set(phone_book);
-
-  for (const num of phone_book) {
-    for (let cut = 1; cut < num.length; cut++) {
-      if (set.has(num.slice(0, cut))) {
-        return false; 
-      }
+    phone_book.sort(); 
+    for(let i = 0; i < phone_book.length - 1; i++){
+        if(phone_book[i + 1].indexOf(phone_book[i]) === 0) return false;
     }
-  }
-  return true;
+    return true;
 }
