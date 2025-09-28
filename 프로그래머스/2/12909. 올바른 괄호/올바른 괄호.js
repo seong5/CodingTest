@@ -1,12 +1,12 @@
-function solution(s) {
-  let open = 0;
-
-  for (const ch of s) {
-    if (ch === '(') open++;
-    else open--;
-
-    if (open < 0) return false; 
-  }
-
-  return open === 0;
+function solution(s){
+    const stack = []
+    for (const char of s) {
+        if(char === "(") {
+            stack.push(char)
+        } else {
+            if(stack.length === 0) return false
+            stack.pop()
+        }
+    }
+    return stack.length === 0
 }
