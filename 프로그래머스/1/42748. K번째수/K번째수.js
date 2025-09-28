@@ -1,7 +1,9 @@
 function solution(array, commands) {
-    return commands.map(([i,j,k]) => {
-        const sliced = array.slice(i-1,j);
-        const sorted = sliced.sort((a,b)=> a-b)
-        return sorted[k-1]
-    })
+    const result = []
+    for(const [i,j,k] of commands) {
+        const sliced = array.slice(i -1, j)
+        sliced.sort((a,b) => a -b)
+        result.push(sliced[k -1])
+    }
+    return result
 }
