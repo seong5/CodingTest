@@ -1,4 +1,6 @@
 function solution(numbers) {
-    const answer = numbers.map(String).sort((a,b) => (b + a) - (a + b)).join("")
-    return answer[0] === "0" ? "0" : answer
+  const strs = numbers.map(String);
+  strs.sort((a, b) => (b + a).localeCompare(a + b));
+  if (strs[0] === "0") return "0";
+  return strs.join("");
 }
