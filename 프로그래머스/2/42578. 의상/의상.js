@@ -1,11 +1,14 @@
 function solution(clothes) {
-  const counts = new Map();
-  for (const [, type] of clothes) {
-    counts.set(type, (counts.get(type) || 0) + 1);
+  const countByType = {};
+
+  for (const [name, type] of clothes) {
+    countByType[type] = (countByType[type] || 0) + 1;
   }
-  let answer = 1;
-  for (const cnt of counts.values()) {
-    answer *= (cnt + 1);
+
+  let result = 1;
+  for (const count of Object.values(countByType)) {
+    result *= (count + 1);
   }
-  return answer - 1;
+
+  return result - 1;
 }
