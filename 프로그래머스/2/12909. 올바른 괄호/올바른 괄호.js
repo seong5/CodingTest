@@ -1,12 +1,11 @@
 function solution(s){
-    const stack = []
-    for (const char of s) {
-        if(char === "(") {
-            stack.push(char)
-        } else {
-            if(stack.length === 0) return false
-            stack.pop()
-        }
+    let count = 0
+    
+    for(const ch of s)  {
+        if (ch === "(") count++;
+        else count--;
+        
+        if(count < 0) return false
     }
-    return stack.length === 0
+    return count === 0
 }
