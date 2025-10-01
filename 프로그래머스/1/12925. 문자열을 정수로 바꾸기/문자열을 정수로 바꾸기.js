@@ -1,4 +1,3 @@
 function solution(s) {
-    const str = Number(s)
-    return str
+    return Number(s)
 }
