@@ -1,3 +1,4 @@
 function solution(n) {
-    return Number(String(n).split("").sort((a,b) => b - a).join(""))
+    const arr = n.toString().split("").sort((a,b) => b- a).join("")
+    return Number(arr)
 }
