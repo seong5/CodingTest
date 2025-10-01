@@ -1,9 +1,12 @@
 function solution(n) {
-    let sum = 0;
-    for(let i = 1; i <= n; i++) {
+    const answer = []
+    for(let i = 1; i * i <= n; i++) {
         if(n % i === 0) {
-            sum += i;
+            answer.push(i)
+            if(i !== n / i) {
+                answer.push(n / i)
+            }
         }
     }
-    return sum
+    return answer.reduce((acc,cur) => acc + cur,0)
 }
