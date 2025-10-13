@@ -1,3 +1,5 @@
 function solution(n) {
-    return n.toString().split("").map(Number).reduce((acc,cur) => acc + cur)
+    const arr = n.toString().split("").map(Number)
+    
+    return arr.reduce((a,b)=> a + b ,0)
 }
