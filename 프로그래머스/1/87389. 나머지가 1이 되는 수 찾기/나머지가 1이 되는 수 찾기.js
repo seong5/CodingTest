@@ -1,7 +1,7 @@
 function solution(n) {
-    for(let i = 1; i < n; i++) {
-       if( n % i === 1) {
-           return i
-       }
-    }
+  const m = n - 1;
+  for (let i = 2; i * i <= m; i++) {
+    if (m % i === 0) return i; 
+  }
+  return m; 
 }
