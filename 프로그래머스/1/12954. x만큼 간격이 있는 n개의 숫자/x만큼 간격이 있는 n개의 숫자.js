@@ -1,7 +1,7 @@
 function solution(x, n) {
-    const stack = []
+    const answer = []
     for(let i = 1; i <= n; i++) {
-        stack.push(x * i)
+        answer.push(x * i)
     }
-    return stack
+    return answer
 }
